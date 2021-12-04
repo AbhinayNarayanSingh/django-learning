@@ -1,0 +1,50 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}
+
+{% endblock title %}
+
+{% block body %}
+         
+        <section class="news-article">
+            <h2>{{post.title}}</h2>
+
+            <img src="{% static './img/image.jpg' %}">
+
+            <h3>By {{post.author}}  |  {{post.publish}}</h3>
+
+        <div class="article-body">
+
+            <p>{{post.body}}</p>
+           
+        </div>
+        </section>
+                
+        
+        <section class="heading">
+            <h2>Related Topics</h2>
+        </section>        
+
+        <section class="other-article">
+
+            <div class="card">
+
+                <img src="./img/image1.jpg" alt="">
+                <h2>Aston Villa avoid relegation on final day</h2>
+                <p>Aston Villa avoided relegation on the final day of the Premier League season as they drew 1-1 at West Ham United and other results went their way. </p>
+                
+            </div>
+            <div class="card">
+
+                <img src="./img/image1.jpg" alt="">
+                <h2>John Lewis to make final journey across Edmund Pettus Bridge in procession</h2>
+                <p>The body of the late US Rep. John Lewis on Sunday will make the final journey across the famous bridge in Selma..</p>
+                
+            </div>
+
+        </section>
+
+
+        </main>
+    
+{% endblock body %}

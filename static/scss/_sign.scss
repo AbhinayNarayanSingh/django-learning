@@ -1,0 +1,152 @@
+.form-title{
+
+    font-family: $font-family-2;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #374151;
+    padding: 20px;
+    text-align: center;
+}
+
+.django-form{
+    padding-bottom: 2rem;
+    form, input{
+        width: 275px;
+        margin: auto;
+    }
+    
+    p{
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    label, a{
+        font-family: $font-family-2;
+        padding: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #6B7280;
+   
+    }
+
+    input{
+        // height: 36px;
+        border: 2px solid rgba(42, 42, 42, 0.1);
+        border-radius: 5px;
+        background: transparent;
+        font-weight: 500;
+        color: #535353;;
+        
+        &:focus{
+            
+            border: 2px solid rgba(42, 42, 42, 0.4);
+        }
+    }
+    
+    textarea{
+        width: 275px;
+        margin: auto;
+        border: 2px solid rgba(42, 42, 42, 0.1);
+        border-radius: 5px;
+        background: transparent;
+        font-weight: 500;
+        color: #535353;
+        padding: 1rem 1.5rem;
+        height: 100px;
+        
+        &:focus{
+            
+            border: 2px solid rgba(42, 42, 42, 0.4);
+        }
+      
+    }
+
+    a{
+        padding-top: 1rem;
+        display: inline-block;
+    }
+    a:hover{
+        color: royalblue;
+    }
+    
+    input[type=button], input[type=submit], input[type=reset] {
+
+        cursor: pointer;
+        background: royalblue;
+        
+        border-radius: 4px;
+        color: white;
+        font-family: $font-family-2;
+        padding: 5px 10px;
+        min-width: 150px;
+        font-weight: 500;
+        font-size: 14px;
+      
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    
+}
+
+.sign-option{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    p{
+
+        font-family: $font-family-2;
+        padding: 10px;
+        font-size: 14px;
+        line-height: 20px;
+        a{
+            color: royalblue;
+            font-weight: 700;
+        }
+    }
+}
+
+
+.account-action{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    
+    a{
+        padding-bottom: 1rem;
+    }
+}
+
+.password{
+    ul{
+        display: none;
+
+    }
+    .errorlist, .errorlist{
+        @extend .error;
+        display: flex;
+        flex-direction: column;
+           li{
+            width: 343px;
+            padding: 0 1rem 5px;
+            line-height: 120%;
+            margin: auto;
+
+        }
+    }
+}
+
+.instruction{
+    p {
+        padding: 0 1rem 2rem;
+        text-align: center;
+        line-height: 120%;
+    }
+
+}

@@ -1,0 +1,79 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block body %}        
+        
+        <main>
+            <section class="hero">
+                <h3>Trending</h3>
+
+                <a href="">
+                    <h2>Cake meme reflects coronavirus absurdity in a world where nothing is what it seems</h2>
+                </a>
+
+                <img src="{% static './img/hero.png' %}">
+
+                <p>Earlier this month, a viral video depicting hyper-realistic cakes as everyday items had folks on social media double-guessing every other post, and sometimes even their own realities, effectively launching the next meme : “Is this real or is this cake?”</p>
+                
+                <h4>By Lucy Hiddleston  |  23 November 2021</h4>
+            </section>
+
+            <section class="BreakingNews">
+                <!-- <div class="heading">
+                    <h2>Breaking News</h2>
+                </div> -->
+                <a href="">Health</a>
+                <a href="">Economy</a>
+                <a href="">Sports</a>
+                <a href="">Faishon</a>
+            </section>
+
+            <section class="news-cards">
+
+                <section class="news-card">
+                        <img src="{% static './img/image.jpg' %}" alt="">
+                        <a href="./post">
+                            <h2>John Lewis, civil rights giant, crosses infamous Selma bridge one final time</h2>
+                        </a>
+                        <p>Solemn crowds watch as Lewis, who died earlier this month at the age of 80, is borne by caisson over Edmund Pettus Bridge</p>
+                        <h3>By Caroline Casey  |  27 November 2021</h3>
+                    </section>
+                    
+                    <section class="news-card">
+                        <img src="{% static './img/image1.jpg' %}" alt="">
+                        <a href="./post">
+                            <h2>John Lewis to make final journey across Edmund Pettus Bridge in procession</h2>
+                        </a>
+                        <p>The body of the late US Rep. John Lewis on Sunday will make the final journey across the famous bridge in Selma..</p>
+                        <h3>By Lucy Hiddleston |  27 November 2021</h3>
+                </section>
+
+            </section>
+                
+
+
+        <section class="heading">
+            <h2>Related Topics</h2>
+        </section>        
+
+        <section class="other-article">
+
+            {% for post in posts %}
+
+                <div class="card">
+
+                    <img src="./img/image1.jpg" alt="">
+                    <a href="{% url 'blog:post' post.pk%}">
+                        <h2>{{post.title}}</h2>
+                    </a>
+                    <p>{{post.description}}</p>
+                    
+                </div>
+            {% endfor %}
+
+        </section>
+
+
+        </main>
+    
+    {% endblock body %}

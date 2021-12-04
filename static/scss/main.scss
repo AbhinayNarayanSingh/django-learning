@@ -1,0 +1,23 @@
+@import "./reset";
+@import "./variables";
+@import "./index";
+@import "./article";
+
+// sign in
+
+@import "./sign";
+
+body{
+    background-color: #E5E5E5;
+}
+.mobile{
+    width: 375px;
+    margin: auto;
+    background-color: white;
+    // min-height: 90vh;
+    margin-top: 3rem;
+}
+main{
+    background-color: #F1F2F3;
+    width: 100%;
+}

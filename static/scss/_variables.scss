@@ -1,0 +1,76 @@
+$colour-1: #2A2A2A;
+$colour-2: #C31815;
+$colour-3: #0E1E32;
+$colour-4: #F1F2F3;
+
+// $font-family: 'Nunito Sans', sans-serif; 
+$font-family-1: 'IBM Plex Serif', serif;
+$font-family-2: 'Poppins', sans-serif;
+
+
+$colour-5: #a2a6b0;
+$colour-6: #cacdd8;
+$colour-7: #000000;
+$colour-8: #c94d3f;
+$colour-9: #78a962;
+$colour-10: #666666;
+
+$border-1: 2px solid $colour-6;
+
+$dropshadow: 0px 2px 14px rgba(42, 42, 42, 0.24);
+
+
+// $max-width: 1400px;
+$max-width: 1366px;
+$cover-image-width: 100%;
+
+@mixin flexDJIW(
+  $flexDir: row,
+  $justifycontent: flex-start,
+  $alignitems: stretch,
+  $flexwrap: wrap
+) {
+  display: flex;
+  flex-direction: $flexDir;
+  justify-content: $justifycontent;
+  align-items: $alignitems;
+  flex-wrap: $flexwrap;
+}
+
+@mixin fontSW-LH(
+  $key1: 1rem,
+  $key2: 400,
+  $key3: normal,
+  $key4: $key1,
+  $key5: $key2,
+  $key6: $key3
+) {
+  font-size: $key1;
+  font-weight: $key2;
+  line-height: $key3;
+
+  @media screen and (max-width: 500px) {
+    font-size: $key4;
+    font-weight: $key5;
+    line-height: $key6;
+  }
+}
+
+@mixin position($key) {
+  @if $key== "father" {
+    position: relative;
+  }
+
+  @if $key== "child" {
+    position: absolute;
+  }
+
+  @if $key== "center" {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+

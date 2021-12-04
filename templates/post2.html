@@ -1,0 +1,48 @@
+{% extends './base.html' %}
+{% block title %}
+{% load static %}
+
+{% endblock title %}
+
+{% block body %}
+         
+        <section class="news-article">
+            <h2>{{post.title}}</h2>
+
+            <img src="{% static './img/image.jpg' %}">
+
+            <h3>By {{post.author}}  |  {{post.publish}}</h3>
+
+        <div class="article-body">
+
+            <p>{{post.body}}</p>
+           
+        </div>
+        </section>
+                
+        
+        <section class="heading">
+            <h2>Related Topics</h2>
+        </section>        
+
+        <section class="other-article">
+
+            {% for post1 in posts %}
+
+                <div class="card">
+
+                    <img src="./img/image1.jpg" alt="">
+                    <a href="{% url 'blog:post' post.pk%}">
+                        <h2>{{post1.title}}</h2>
+                    </a>
+                    <p>{{post1.description}}</p>
+                    
+                </div>
+            {% endfor %}
+
+        </section>
+
+
+        </main>
+    
+{% endblock body %}
